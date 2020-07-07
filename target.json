@@ -1,0 +1,13 @@
+{
+  "web":{
+    "baseUrl": "http://yeroshchenko.pythonanywhere.com/",
+    "username": "alla",
+    "password": "alla"
+  },
+  "db":{
+    "host": "Yeroshchenko.mysql.pythonanywhere-services.com",
+    "name": "Yeroshchenko$RBuilder",
+    "user": "Yeroshchenko",
+    "password": "alla12345"
+  }
+}

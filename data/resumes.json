@@ -1,0 +1,86 @@
+[
+  {
+    "py/object": "model.resume.Resume",
+    "id": null,
+    "first_name": "Helen",
+    "last_name": "Smith",
+    "email": "helen.smith@gmail.com",
+    "phone": "+1 (650) 345 34 45",
+    "address": "123 Santa Clara St.",
+    "city": "San Carlos",
+    "state": "CA",
+    "country": "USA",
+    "zip_code": "94061",
+    "job_title": "Software Developer",
+    "summury": "Highly experienced professional",
+    "education": [{
+        "py/object": "model.education.Education",
+        "organization": "Berkley University",
+        "description": "Computer Science",
+        "title": "Master degree",
+        "start_date": "09/01/1992",
+        "end_date": "06/30/1997"
+    }
+    ],
+    "experience": [{
+        "py/object": "model.experience.Experience",
+        "position": "Software QA Engineer", 
+        "company_name": "Google",
+        "description": "hhgdfgdfjd",
+        "start_date": "08/15/1997",
+        "end_date": "07/07/2005"
+
+    },
+    {
+        "py/object": "model.experience.Experience",
+        "position": "Software Engineer", 
+        "company_name": "Apple",
+        "description": "hhgdfgkjdfhgkdfhkghdkfjdfjd",
+        "start_date": "07/10/2005",
+        "end_date": "07/07/2010"
+    }
+    ]
+  },
+ {
+    "py/object": "model.resume.Resume",
+    "id": null,
+    "first_name": "John",
+    "last_name": "White",
+    "email": "John.white@yahoo.com",
+    "phone": "+1 (750) 345 67 66",
+    "address": "123 Woodside St.",
+    "city": "Redwood City",
+    "state": "CA",
+    "country": "USA",
+    "zip_code": "94061",
+    "job_title": "Software Engineer",
+    "summury": "Highly experienced professional",
+    "education": [{
+        "py/object": "model.education.Education",
+        "organization": "Stanford University",
+        "description": "Computer Science",
+        "title": "Bachelor degree",
+        "start_date": "09/01/1992",
+        "end_date": "06/30/1997"
+    }
+    ],
+    "experience": [{
+        "py/object": "model.experience.Experience",
+        "position": "Software QA Engineer", 
+        "company_name": "Google",
+        "description": "hhgdfgdfjd",
+        "start_date": "08/15/1997",
+        "end_date": "07/07/2005"
+
+    },
+    {
+        "py/object": "model.experience.Experience",
+        "position": "Software Engineer", 
+        "company_name": "Apple",
+        "description": "hhgdfgkjdfhgkdfhkghdkfjdfjd",
+        "start_date": "07/10/2005",
+        "end_date": "07/07/2010"
+    }
+    ]
+  } 
+]
