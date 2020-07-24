@@ -1,0 +1,9 @@
+pytest
+selenium
+json
+jsonpickle
+os.path
+importlib
+pymysql
+sshtunnel
+mysql-connector-python

@@ -31,7 +31,7 @@ def random_string(prefix, maxlen):
 
 testdata=[Resume(None, random_string("first_name", 10), random_string("last_name", 15), random_string("email", 20),
         random_string("phone", 12), random_string("address", 50), random_string("city", 30), 
-        random_string("state", 30), random_string("country", 20), random_string("zip_code", 50),
+        random_string("state", 30), random_string("country", 20), random_string("zip_code", 5),
         random_string("job_title", 50), random_string("summary", 50),
         [Education(None, None, random_string("organization_name", 20), random_string("description", 20), 
             random_string("title", 20), start_date='2020-01-01', end_date='2020-01-01')], 

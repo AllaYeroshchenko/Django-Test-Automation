@@ -5,9 +5,13 @@
     "password": "alla"
   },
   "db":{
-    "host": "Yeroshchenko.mysql.pythonanywhere-services.com",
-    "name": "Yeroshchenko$RBuilder",
+    "ssh": "ssh.pythonanywhere.com",
+    "ssh_host": "Yeroshchenko.mysql.pythonanywhere-services.com",
+    "ssh_user": "Yeroshchenko",
+    "ssh_password": "*****",
+    "host": "127.0.0.1",
+    "database_name": "Yeroshchenko$RBuilder",
     "user": "Yeroshchenko",
-    "password": "alla12345"
+    "password": "*****"
   }
 }

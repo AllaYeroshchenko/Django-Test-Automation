@@ -8,23 +8,19 @@ class ResumeHelper:
 
     def open_resumes_page(self):
         wd = self.app.wd
-        if not wd.current_url.endswith("/resume"): #and (len(wd.find_elements_by_link_text("Add new resume")))>0):
+        if not wd.current_url.endswith("/resume"): 
             self.app.open_home_page()
             wd.find_element_by_id("resume_app").click()
             wd.find_element_by_link_text("Add new resume").click()
 
+
     def add(self, resume):
         wd = self.app.wd
         self.open_resumes_page()
-        # init resume adding
-        #wd.find_element_by_name("new").click()
         # fill group form
         self.fill(resume)
+        wd.find_element_by_xpath("//input[@type='submit']").click()        
 
-        # submit group creation
-        #wd.find_element_by_name("submit").click()
-        #self.to_main_page()
-        #self.group_cache = None
 
     def fill(self, resume):
         wd = self.app.wd
@@ -40,8 +36,8 @@ class ResumeHelper:
         self.change_field_value(wd, "zip_code", resume.zip_code)
         self.change_field_value(wd, "job_title", resume.job_title)
         self.change_field_value(wd, "summary", resume.summary)
+        #fill education block
         number_edu=len(resume.education)
-        print("number= ", number_edu)
         num=0
         while number_edu>0:
             edu_block=wd.find_element_by_id("education"+str(num+1))
@@ -54,7 +50,7 @@ class ResumeHelper:
             num=num+1
             if number_edu>0:
                 wd.find_element_by_id("edu").click()
-        
+        #fill experience block
         number_exp=len(resume.experience)
         print("number= ", number_exp)
         num=0
@@ -70,8 +66,7 @@ class ResumeHelper:
             if number_exp>0:
                 wd.find_element_by_id("exp").click()
                 
-        wd.find_element_by_xpath("//input[@type='submit']").click()        
-    
+        
 
     def change_field_value(self, location, fieldname, text):
         #wd = self.app.wd

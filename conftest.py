@@ -4,7 +4,7 @@ import json
 import jsonpickle
 import os.path
 import importlib
-#from fixture.db import DbFixture
+from fixture.db import DbFixture
 
 fixture = None
 target = None
@@ -29,14 +29,21 @@ def app(request):
     fixture.session.ensure_login(username=web_config['username'], password=web_config['password'])
     return fixture
 
-# @pytest.fixture(scope="session")
-# def db(request):
-#     db_config = load_config(request.config.getoption('--target'))["db"]
-#     dbfixture = DbFixture(host=db_config["host"], name=db_config["name"], user=db_config["user"], password=db_config["password"])
-#     def fin():
-#         dbfixture.destroy()
-#     request.addfinalizer(fin)
-#     return dbfixture
+@pytest.fixture(scope="session")
+def db(request):
+    db_config = load_config(request.config.getoption('--target'))["db"]
+    dbfixture = DbFixture(ssh=db_config["ssh"], 
+        ssh_host=db_config["ssh_host"], 
+        ssh_user=db_config["ssh_user"], 
+        ssh_password=db_config["ssh_password"], 
+        host=db_config["host"], 
+        database_name=db_config["database_name"], 
+        user=db_config["user"], 
+        password=db_config["password"])
+    def fin():
+        dbfixture.destroy()
+    request.addfinalizer(fin)
+    return dbfixture
 
 
 
