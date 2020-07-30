@@ -1,6 +1,6 @@
 [
   {
-    "py/object": "model.resume.Resume",
+    "py/object": "models.resume.Resume",
     "id": null,
     "first_name": "Helen",
     "last_name": "Smith",
@@ -12,37 +12,53 @@
     "country": "USA",
     "zip_code": "94061",
     "job_title": "Software Developer",
-    "summury": "Highly experienced professional",
+    "summary": "Highly experienced professional",
     "education": [{
-        "py/object": "model.education.Education",
-        "organization": "Berkley University",
+        "py/object": "models.education.Education",
+        "id": null,
+        "resume_id": null,
+        "organization_name": "Berkley University",
         "description": "Computer Science",
         "title": "Master degree",
-        "start_date": "09/01/1992",
-        "end_date": "06/30/1997"
+        "start_date": "1992-09-01",
+        "end_date": "1997-06-30"
+    },
+    {
+        "py/object": "models.education.Education",
+        "id": null,
+        "resume_id": null,
+        "organization_name": "Stanford University",
+        "description": "Ciber security",
+        "title": "Master degree",
+        "start_date": "2003-09-01",
+        "end_date": "2005-06-30"
     }
     ],
     "experience": [{
-        "py/object": "model.experience.Experience",
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
         "position": "Software QA Engineer", 
         "company_name": "Google",
-        "description": "hhgdfgdfjd",
-        "start_date": "08/15/1997",
-        "end_date": "07/07/2005"
+        "description": "Description",
+        "start_date": "1997-08-15",
+        "end_date": "2005-07-07"
 
     },
     {
-        "py/object": "model.experience.Experience",
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
         "position": "Software Engineer", 
         "company_name": "Apple",
         "description": "hhgdfgkjdfhgkdfhkghdkfjdfjd",
-        "start_date": "07/10/2005",
-        "end_date": "07/07/2010"
+        "start_date": "2005-07-10",
+        "end_date": "2010-07-07"
     }
     ]
   },
- {
-    "py/object": "model.resume.Resume",
+  {
+    "py/object": "models.resume.Resume",
     "id": null,
     "first_name": "John",
     "last_name": "White",
@@ -54,32 +70,48 @@
     "country": "USA",
     "zip_code": "94061",
     "job_title": "Software Engineer",
-    "summury": "Highly experienced professional",
+    "summary": "Highly experienced professional",
     "education": [{
-        "py/object": "model.education.Education",
-        "organization": "Stanford University",
+        "py/object": "models.education.Education",
+        "id": null,
+        "resume_id": null,
+        "organization_name": "Stanford University",
         "description": "Computer Science",
         "title": "Bachelor degree",
-        "start_date": "09/01/1992",
-        "end_date": "06/30/1997"
+        "start_date": "1992-09-01",
+        "end_date": "1997-06-30"
     }
     ],
     "experience": [{
-        "py/object": "model.experience.Experience",
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
         "position": "Software QA Engineer", 
         "company_name": "Google",
-        "description": "hhgdfgdfjd",
-        "start_date": "08/15/1997",
-        "end_date": "07/07/2005"
+        "description": "Description",
+        "start_date": "1997-08-15",
+        "end_date": "2005-07-07"
 
     },
     {
-        "py/object": "model.experience.Experience",
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
         "position": "Software Engineer", 
         "company_name": "Apple",
         "description": "hhgdfgkjdfhgkdfhkghdkfjdfjd",
-        "start_date": "07/10/2005",
-        "end_date": "07/07/2010"
+        "start_date": "2005-07-10",
+        "end_date": "2010-07-07"
+    },
+    {
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
+        "position": "Software Full-stack Developer", 
+        "company_name": "Cisco",
+        "description": "Description",
+        "start_date": "2003-09-10",
+        "end_date": "2005-07-10"
     }
     ]
   } 

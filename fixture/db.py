@@ -8,7 +8,7 @@ sshtunnel.SSH_TIMEOUT = 5.0
 sshtunnel.TUNNEL_TIMEOUT = 5.0
 
 class DbFixture:
-    def __init__(self, ssh, ssh_host, ssh_user, ssh_password, host, database_name, user, password):
+    def __init__(self, ssh, ssh_host, ssh_user, ssh_password, host, database_name, user, password, user_id):
         self.ssh=ssh
         self.ssh_host=ssh_host
         self.ssh_user=ssh_user
@@ -17,6 +17,7 @@ class DbFixture:
         self.database_name=database_name
         self.user=user
         self.password=password
+        self.user_id=user_id
         #use ssh tunnel
         self.tunnel=sshtunnel.SSHTunnelForwarder((ssh), 
             ssh_username=ssh_user, 
@@ -70,6 +71,30 @@ class DbFixture:
         finally:
             cursor.close()
         return rows     
+
+    def get_quantity_resumes(self):
+        quantuty=0
+        cursor = self.connection.cursor()
+        try:    
+            cursor.execute("select count(*) from resume_resume")
+            row=cursor.fetchone()
+            quantuty=row[0]
+        finally:
+            cursor.close()
+        return quantuty
+
+    def get_quantity_resumes_for_user(self):
+        quantuty=0
+        cursor = self.connection.cursor()
+        try:    
+            cursor.execute("select count(*) from resume_resume where user_id_id=%s", (self.user_id, ))
+            row=cursor.fetchone()
+            quantuty=row[0]
+        finally:
+            cursor.close()
+        return quantuty
+
+
 
     def destroy(self):
         self.connection.close()

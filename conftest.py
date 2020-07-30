@@ -39,7 +39,8 @@ def db(request):
         host=db_config["host"], 
         database_name=db_config["database_name"], 
         user=db_config["user"], 
-        password=db_config["password"])
+        password=db_config["password"],
+        user_id=db_config["user_id"])
     def fin():
         dbfixture.destroy()
     request.addfinalizer(fin)

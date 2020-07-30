@@ -1,0 +1,60 @@
+[
+  {
+    "py/object": "models.resume.Resume",
+    "id": null,
+    "first_name": "EditedHelen",
+    "last_name": "EditedSmith",
+    "email": "edited.smith@gmail.com",
+    "phone": "+1 (111) 111 11 11",
+    "address": "Edited 123 Santa Clara St.",
+    "city": "Edited San Carlos",
+    "state": "Edited",
+    "country": "Edited USA",
+    "zip_code": "11111",
+    "job_title": "Edited Software Developer",
+    "summary": "Edited Highly experienced professional",
+    "education": [{
+        "py/object": "models.education.Education",
+        "id": null,
+        "resume_id": null,
+        "organization_name": " Edited Berkley University",
+        "description": "Edited Computer Science",
+        "title": "Edited Master degree",
+        "start_date": "1998-09-01",
+        "end_date": "2000-06-30"
+    },
+    {
+        "py/object": "models.education.Education",
+        "id": null,
+        "resume_id": null,
+        "organization_name": "Edited Stanford University",
+        "description": "Edited Ciber security",
+        "title": "Edited Master degree",
+        "start_date": "2008-09-01",
+        "end_date": "2009-06-30"
+    }
+    ],
+    "experience": [{
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
+        "position": "Edited Software QA Engineer", 
+        "company_name": "Edited Google",
+        "description": "Edited Description",
+        "start_date": "1998-08-15",
+        "end_date": "2006-07-07"
+
+    },
+    {
+        "py/object": "models.experience.Experience",
+        "id": null,
+        "resume_id": null,
+        "position": "Edited Software Engineer", 
+        "company_name": "Edited Apple",
+        "description": "Edited",
+        "start_date": "2007-07-10",
+        "end_date": "2011-07-07"
+    }
+    ]
+  }
+]
