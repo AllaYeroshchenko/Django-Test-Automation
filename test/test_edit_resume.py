@@ -9,7 +9,7 @@ import pytest
 import random
 
 def load_from_json():
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data\\resumes_for_edit.json")) as fr:
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..\\data\\resumes_for_edit.json")) as fr:
         return jsonpickle.decode(fr.read())
 
 testdata=load_from_json()
