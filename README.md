@@ -11,7 +11,7 @@ It was written in Python, based on pytest framework using Selenium library.
 
 
 # The goal
-My goal is to find a job as a Quality Assurance Automation Engineer. The main purpose of this project is to demonstrate my ability to use the knowledge that I received from different courses and also my ability to work independently. I couldn't demonstrate my ability to work in a team, because I didn't have a team; I worked alone. But I will be happy to help somebody who is also a job seeker or anyone else who has any questions about this project. Feel free to write to me with any questions about this project, and you can use my code in your own projects. 
+My goal is to find a job as a Quality Assurance Automation Engineer. The main purpose of this project is to demonstrate my ability to use the knowledge that I received from different courses and also my ability to work independently. I couldn't demonstrate my ability to work in a team, because I didn't have a team; I worked alone. But I will be happy to help somebody who is also a job seeker or anyone else who has any questions about this project. Feel free to write to me with any questions about this project, and you can use my code in your own projects.  
 The application Resume Builder, which is tested by this framework, was also developed by me. I built it using Python, Django, JavaScript, and of course HTML  and CSS. For data storage I use mySQL database. But it could be any relational database; Django is very flexible.    
     
 
@@ -43,17 +43,17 @@ DjangoTesting
     └── test_edit_resume.py
 ```    
 
-**requirements.txt**
-This is the list of packages that are used in the project.
-To install the depended packages in requirements.txt use: 
+**requirements.txt**  
+This is the list of packages that are used in the project.  
+To install the depended packages in requirements.txt use:   
 ```
 pip install -r requirements.txt
 ```
-**target.json**
+**target.json**  
 This is the data that we need to run the project.
-The name of the domain, user log in and password, and all data that we need to connect to the database from the local machine. In the case of Pythonanywhere I need to make an SSH tunnel to retrieve data from database.
+The name of the domain, user log in and password, and all data that we need to connect to the database from the local machine. In the case of Pythonanywhere I need to make an SSH tunnel to retrieve data from database.  
 
-**conftest.py**
+**conftest.py**  
 This is a specific file for pytest. It uses for defining and finalizing fixtures. There are two fixtures: app and db. App fixture creates an instance of the Application class. It ensures all prerequisites for the test: run browser, go to the home page and log in. Another db fixture creates an instance for a database connection. After instantiating these two fixtures we are ready for testing. 
 We have a possibility run project with parameters "--browser" and/or "--target". "--browser" can be "firefox", "chrome" or "ie". In "--target" we can connect files with different data, for example, if we need tests with different users. We can run tests like this:  
 ```
@@ -65,39 +65,39 @@ pytest --browser ie -s -vv
 **data**
 This folder contains data for testing in JSON format. 
 
-**generator** 
-	- **resume.py**
-	This file contains a script for generating random resumes for tests. It's not for constantly using, but sometimes it can be useful.
-	Use it like this:
+**generator**  
+	- **resume.py**  
+	This file contains a script for generating random resumes for tests. It's not for constantly using, but sometimes it can be useful.  
+	Use it like this:  
 	```
 	python generator\resume.py
 	```
 
-**fixture** 
-	- **application.py**
-	This file contains a fixture Application that has all the necessary things to start a testing framework. It starts browser, open start page and log in, and it makes everything ready to start tests. 
-	- **resume.py**
-	This file contains all functions which working with resume. 
-	- **session.py**
-	This file contains functions log in and logout. 
-	- **db.py**
-	This file contains a fixture dbFixture that works with a database. In this case, we work with MySQL database.
+**fixture**   
+	- **application.py**    
+	This file contains a fixture Application that has all the necessary things to start a testing framework. It starts browser, open start page and log in, and it makes everything ready to start tests.     
+	- **resume.py**  
+	This file contains all functions which working with resume.   
+	- **session.py**  
+	This file contains functions log in and logout.   
+	- **db.py**  
+	This file contains a fixture dbFixture that works with a database. In this case, we work with MySQL database.    
 
-**models** 
-	- **resume.py**
-	This file contains a Resume object.
-	- **education.py**
-	This file contains an Education object.
-	- **experience.py**
-	This file contains an Experience object.
+**models**   
+	- **resume.py**  
+	This file contains a Resume object.  
+	- **education.py**  
+	This file contains an Education object.  
+	- **experience.py**  
+	This file contains an Experience object.  
 
-**test** 
-	- **test_add_resume.py**
-	This file contains a test that checks the functionality of adding a new resume.
-	- **test_delete_resume.py**
-	This file contains a test that checks the functionality of deleting a random resume.
-	- **test_edit_resume.py**
-	This file contains a test that checks the functionality of editing a random resume.
+**test**   
+	- **test_add_resume.py**  
+	This file contains a test that checks the functionality of adding a new resume.  
+	- **test_delete_resume.py**  
+	This file contains a test that checks the functionality of deleting a random resume.  
+	- **test_edit_resume.py**  
+	This file contains a test that checks the functionality of editing a random resume.  
 
 
 # Tests
