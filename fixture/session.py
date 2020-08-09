@@ -40,8 +40,7 @@ class SessionHelper:
 
     def get_logged_user(self):
         wd = self.app.wd
-        print(wd.find_element_by_xpath("/html/body/div/header/div/div/div[2]/li/text()"))
-        return wd.find_element_by_xpath("/html/body/div/header/div/div/div[2]/li/text()")
+        return wd.find_element_by_css("img.user_icon")
 
 
     def ensure_login(self, username, password):

@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
+import sys
+import os.path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from models.resume import Resume
 from models.experience import Experience
 from models.education import Education
 import random
 import string
-import os.path
 import jsonpickle
 import getopt
-import sys
+
 
 try:
     opts, args=getopt.getopt(sys.argv[1:], "n:f:", ["number of resumes", "file"])
@@ -16,7 +18,7 @@ except getopt.GetoptError as err:
     sys.exit(2)
 
 n=3 #quantity of records in the file
-f="data/resume_random_gen.json"
+f="data/resume_random_gen1.json"
 
 for o, a in opts:
     if o=="-n":

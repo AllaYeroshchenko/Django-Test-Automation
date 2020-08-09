@@ -19,6 +19,7 @@ testdata=load_from_json()
 def test_add_resume(app, db, resume):
 	last_id=db.get_last_resume_id()
 	app.resume.add(resume)
+	assert app.resume.was_added()==True, "Something went wrong, couldn't find a message that resume was added."
 	last_new_id=db.get_last_resume_id()
 	# check that max id is changed
 	assert last_id != last_new_id

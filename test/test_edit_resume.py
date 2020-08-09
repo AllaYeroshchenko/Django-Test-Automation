@@ -25,6 +25,7 @@ def test_edit_resume(app, db, resume):
 	resumes_list=app.resume.get_resumes_list()
 	random.choice(resumes_list).click()
 	resume_id=app.resume.edit_resume(resume)
+	assert app.resume.was_edited()==True, "Something went wrong, couldn't find a message that resume was edited."
 	quantity_resumes_after=db.get_quantity_resumes_for_user()
 	assert quantity_resumes_before==quantity_resumes_after
 	#get the edited resume record from database and compare it with data for edit
@@ -44,24 +45,3 @@ def test_edit_resume(app, db, resume):
  
 
 
-
-	# last_id=db.get_last_resume_id()
-	# app.resume.add(resume)
-	# last_new_id=db.get_last_resume_id()
-	# # check that max id is changed
-	# assert last_id != last_new_id
-	# #get a new resume record from database and compare it with added data
-	# new_resume_rec=db.get_resume_record(last_new_id)[0]
-	# assert new_resume_rec==(resume.first_name, resume.last_name, resume.email, resume.phone, resume.address,
-	# 	resume.city, resume.state, resume.country, resume.zip_code, resume.job_title, resume.summary)
-	# #get a new education record from database and compare it with added data
-	# new_education_rec=db.get_education_record(last_new_id)
-	# for i in range(len(new_education_rec)):
-	# 	assert new_education_rec[i]==(resume.education[i].organization_name, resume.education[i].description,
-	# 	 resume.education[i].title, resume.education[i].start_date, resume.education[i].end_date)
-	# #get a new experience record from database and compare it with added data
-	# new_experience_rec=db.get_experience_record(last_new_id)
-	# for i in range(len(new_experience_rec)):
-	# 	assert new_experience_rec[i]==(resume.experience[i].position, resume.experience[i].company_name,
-	# 	 resume.experience[i].description, resume.experience[i].start_date, resume.experience[i].end_date)	
- # 

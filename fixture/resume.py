@@ -13,7 +13,6 @@ class ResumeHelper:
             wd.find_element_by_id("resume_app").click()
             
 
-
     def add(self, resume):
         wd = self.app.wd
         self.open_resumes_page()
@@ -21,6 +20,22 @@ class ResumeHelper:
         # fill group form
         self.fill(resume)
         wd.find_element_by_xpath("//input[@type='submit']").click()        
+
+
+    def was_added(self):
+        wd = self.app.wd 
+        if wd.find_element_by_xpath("//*[.='Resume was added']"):
+            return True
+        else:
+            return False       
+
+
+    def was_edited(self):
+        wd = self.app.wd 
+        if wd.find_element_by_xpath("//*[.='Resume was edited']"):
+            return True
+        else:
+            return False              
 
 
     def fill(self, resume):
@@ -96,6 +111,7 @@ class ResumeHelper:
         wd.find_element_by_css_selector("form#delete_resume>input[type='submit']").click()
         wd.switch_to.alert.accept()
         return resume_id   
+
 
     def edit_resume(self, resume):
         wd=self.app.wd
