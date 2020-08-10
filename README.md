@@ -1,8 +1,8 @@
 # Django-Test-Automation
 
-This is a test framework for Resume Builder training application located at [Pythonanywhere hosting](http://yeroshchenko.pythonanywhere.com/) 
-Source code of Resume Builder located [here](https://github.com/AllaYeroshchenko/django)
-It was written in Python, based on pytest framework using Selenium library.  
+This is a test framework for Resume Builder training application located at [Pythonanywhere hosting](http://yeroshchenko.pythonanywhere.com/).
+Source code of Resume Builder located [here](https://github.com/AllaYeroshchenko/django).
+It was written in Python, based on the pytest framework using the Selenium library.  
 
 
 * [The goal](#The-goal)
@@ -37,8 +37,8 @@ DjangoTesting
 │   ├── resume.py
 │   ├── education.py
 │   └── experience.py
-└── test 
-	├── test_add_resume.py
+└── test
+    ├── test_add_resume.py
     ├── test_delete_resume.py
     └── test_edit_resume.py
 ```    
