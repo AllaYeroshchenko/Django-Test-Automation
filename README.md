@@ -50,12 +50,11 @@ To install the depended packages in requirements.txt use:
 pip install -r requirements.txt
 ```
 **target.json**  
-This is the data that we need to run the project.
-The name of the domain, user log in and password, and all data that we need to connect to the database from the local machine. In the case of Pythonanywhere I need to make an SSH tunnel to retrieve data from database.  
+This is the data that we need to run the project, the name of the domain, user log in and password, and all the data that we need to connect to the database from the local machine. In the case of Pythonanywhere I need to make an SSH tunnel to retrieve data from the database.  
 
 **conftest.py**  
-This is a specific file for pytest. It uses for defining and finalizing fixtures. There are two fixtures: app and db. App fixture creates an instance of the Application class. It ensures all prerequisites for the test: run browser, go to the home page and log in. Another db fixture creates an instance for a database connection. After instantiating these two fixtures we are ready for testing. 
-We have a possibility run project with parameters "--browser" and/or "--target". "--browser" can be "firefox", "chrome" or "ie". In "--target" we can connect files with different data, for example, if we need tests with different users. We can run tests like this:  
+This is a specific file for pytest is used for defining and finalizing fixtures. There are two fixtures: app and db. The app fixture creates an instance of the Application class. It ensures all prerequisites for the test: run browser, go to the home page and log in. Another db fixture creates an instance for a database connection. After instantiating these two fixtures we are ready for testing. 
+We have the possibility to run the project with parameters "--browser" and/or "--target". "--browser" can be "firefox", "chrome" or "ie". In "--target" we can connect files with different data, for example, if we need tests with different users. We can run tests like this:  
 ```
 pytest --browser chrome --target another_target.json -s -vv
 pytest --browser firefox -s -vv
@@ -67,7 +66,7 @@ This folder contains data for testing in JSON format.
 
 **generator**  
 	- **resume.py**  
-	This file contains a script for generating random resumes for tests. It's not for constantly using, but sometimes it can be useful.  
+	This file contains a script for generating random resumes for tests. It's not for constant use, but sometimes it can be useful.  
 	Use it like this:  
 	```
 	python generator\resume.py
@@ -75,13 +74,13 @@ This folder contains data for testing in JSON format.
 
 **fixture**   
 	- **application.py**    
-	This file contains a fixture Application that has all the necessary things to start a testing framework. It starts browser, open start page and log in, and it makes everything ready to start tests.     
+	This file contains a fixture Application that has all the necessary things to start a testing framework. It starts the browser, opens the start page and logs in, and it gets everything ready to start tests.     
 	- **resume.py**  
-	This file contains all functions which working with resume.   
+	This file contains all functions which work with resumes.   
 	- **session.py**  
 	This file contains functions log in and logout.   
 	- **db.py**  
-	This file contains a fixture dbFixture that works with a database. In this case, we work with MySQL database.    
+	This file contains a fixture dbFixture that works with a database. In this case, we work with a MySQL database.    
 
 **models**   
 	- **resume.py**  
@@ -104,49 +103,49 @@ This folder contains data for testing in JSON format.
 
 Framework checks the main functionality, just 3 test cases.
 
-## Test Add New Resume
+## Test Add a New Resume
 This test is parametrized. It downloads the data from a JSON file and then runs a test for each resume from the file.
-1. Get the last resume id from database.
+1. Get the last resume id from the database.
 2. Add a new resume.
-3. Check that page has a message "Resume was added".
+3. Check that the page has a message "Resume was added".
 4. Get a new last resume id from the database.
 5. Check that the last resume id has changed.
 6. Get a new resume record from the database using the new last resume id.
-7. Check that the new resume record in the database is equal to added data.
+7. Check that the new resume record in the database is equal to the added data.
 8. Get new education records from the database using the new last resume id.
-9. Check that new education records in the database are equal to added data.
+9. Check that new education records in the database are equal to the added data.
 10. Get new experience records from the database using the new last resume id.
-11. Check that new experience records in the database are equal to added data.
+11. Check that the new experience records in the database are equal to the added data.
 
-## Test Delete Resume
-1. Check the quantity resumes for the current user in the database.
+## Test Delete a Resume
+1. Check the quantity of resumes for the current user in the database.
 2. If the quantity is zero add a new resume.
 3. Get the quantity of resumes before deleting.
 4. Get a list of resumes from the web page.
-5. Chose a random resume from the list.
+5. Choose a random resume from the list.
 6. Delete the random resume.
 7. Get the quantity of resumes after deleting.
-8. Check that quantity of resume is decreased by 1.
+8. Check that the quantity of resume has decreased by 1.
 9. Check that there are no records about the deleted resume in the database.
 10. Check that there are no records about education connected with the deleted resume in the database.
 11. Check that there are no records about experience connected with the deleted resume in the database.
 
-## Test Edit Resume
+## Test Edit a Resume
 This test is parametrized. It downloads the data from a JSON file and then runs a test for each resume from the file. But there is just one resume in the example.
-1. Check the quantity resumes for the current user in the database.
+1. Check the quantity of resumes for the current user in the database.
 2. If the quantity is zero add a new resume.
 3. Get the quantity of resumes before deleting.
 4. Get a list of resumes from the web page.
-5. Chose a random resume from the list.
+5. Choose a random resume from the list.
 6. Edit the random resume with new data.
-7. Check that page has a message "Resume was edited".
+7. Check that the page has a message "Resume was edited".
 8. Get the quantity of resumes for the current user in the database after deleting.
-9. Check that quantity of resumes didn't change. 
+9. Check that the quantity of resumes hasn’t changed. 
 10. Get an edited resume record from the database using the random resume id.
-11. Check that the edited resume record in the database is equal to data for editing.
+11. Check that the edited resume record in the database is equal to the data for editing.
 12. Get edited education records from the database using the random resume id.
-13. Check that the edited education records in the database are equal to data for editing.
+13. Check that the edited education records in the database are equal to the data for editing.
 14. Get edited experience records from the database using the random resume id.
-15. Check that the edited experience records in the database are equal to data for editing.
+15. Check that the edited experience records in the database are equal to the data for editing.
 
 
