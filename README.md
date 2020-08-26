@@ -2,7 +2,7 @@
 
 This is a test framework for Resume Builder training application located at [Pythonanywhere hosting](http://yeroshchenko.pythonanywhere.com/).
 Source code of Resume Builder located [here](https://github.com/AllaYeroshchenko/django).
-It was written in Python, based on the pytest framework using the Selenium library.  
+It was written in Python, based on the PyTest framework using the Selenium library.  
 
 
 * [The goal](#The-goal)
@@ -11,8 +11,8 @@ It was written in Python, based on the pytest framework using the Selenium libra
 
 
 # The goal
-My goal is to find a job as a Quality Assurance Automation Engineer. The main purpose of this project is to demonstrate my ability to use the knowledge that I received from different courses and also my ability to work independently. I couldn't demonstrate my ability to work in a team, because I didn't have a team; I worked alone. But I will be happy to help somebody who is also a job seeker or anyone else who has any questions about this project. Feel free to write to me with any questions about this project, and you can use my code in your own projects.  
-The application Resume Builder, which is tested by this framework, was also developed by me. I built it using Python, Django, JavaScript, and of course HTML  and CSS. For data storage I use mySQL database. But it could be any relational database; Django is very flexible.    
+My goal is to find a job as a Quality Assurance Automation Engineer. The main purpose of this project is to demonstrate my ability to use the knowledge that I have received from different courses and also my ability to work independently. I couldn't demonstrate my ability to work in a team, because I didn't have a team; I was working alone. But I will be happy to help somebody who is also a job seeker or anyone else who has any questions about this project. Feel free to write me with any questions about this project, and you can use my code in your own projects.  
+The application Resume Builder, which is tested by this framework, was also developed by me. I have built it using Python, Django, JavaScript, and of course HTML  and CSS. For data storage I use mySQL database. But it could be any relational database; Django is very flexible.    
     
 
 # Structure
