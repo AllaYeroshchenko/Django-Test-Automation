@@ -1,4 +1,4 @@
-# Django-Test-Automation
+# Resume-Builder-Test-Automation
 
 This is a test framework for Resume Builder training application located at [Pythonanywhere hosting](http://yeroshchenko.pythonanywhere.com/).
 Source code of Resume Builder located [here](https://github.com/AllaYeroshchenko/django).
